@@ -38,20 +38,19 @@ function NewThing() {
 
 function Greeting() {
   var message;
-  // var username = 'root';
-  var username = undefined;
+  var username = 'root';
+  // var username = undefined;
   // var username = null;
   // var username = false;
 
   var loggedIn;
-    if(typeof username === 'string'){
+    if(typeof username === 'string' && username){
       message = <h1>Welcome, {username}</h1>
     }else if (typeof username === 'undefined' || typeof username === 'null') {
       message = <h1>Not logged in.</h1>
     } else {
       message = <h1>Please try again</h1>
     }
-
 
   return (
     <div>
